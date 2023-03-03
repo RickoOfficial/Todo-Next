@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgb(14, 165, 233) rgb(203 213 225);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+	background: rgb(203 213 225);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgb(14, 165, 233);
+	border-radius: 31px;
+	border: 0px solid #ffffff;
+}
+
+.layout {
+	@apply bg-gradient-to-br from-cyan-300  to-sky-300 h-screen overflow-hidden relative;
+}
+
+.card {
+	@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded bg-white w-5/6 h-5/6;
+}
+
+.ContextMenu {
+	@apply absolute bg-white rounded shadow-md shadow-slate-300 overflow-hidden border border-slate-300;
+}
+
+.ContextMenuItem {
+	@apply px-3 py-1 hover:bg-slate-100 transition-all select-none cursor-pointer font-normal;
+}
